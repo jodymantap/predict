@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Price Prediction</title>
+  </head>
+  <body>
+    <div
+      class="
+        container
+        bg-gradient-to-r
+        from-green-400
+        to-blue-500
+        text-center
+        p-5
+      "
+    >
+      <h1 class="font-semibold text-xl text-white">
+        Ticket Price Prediction for Short Aircraft Route
+      </h1>
+    </div>
+    <div class="container py-5 flex justify-center shadow-xl">
+        <div class="flex flex-col justify-center">
+            <div class="flex flex-col">
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="">From :</h1>
+                    <select class="w-72 ml-10 py-2 my-2 bg-blue-200 focus:outline-none rounded-xl px-10 cursor-pointer" name="" id="origin">
+                        <option disabled="disabled" selected="true" value="">Choose your origin</option>
+                        <option value="wamena">Wamena (WMX)</option>
+                    </select>
+                </div>
+                
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="">To :</h1>
+                    <select class="w-72 py-2 my-2 bg-blue-200 focus:outline-none rounded-xl px-10 cursor-pointer" name="" id="destination">
+                        <option disabled="disabled" selected="true" value="">Choose your destination</option>
+                        <option value="jayapura">Jayapura (DJJ)</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="">Date :</h1>
+                    <input id="date" class="w-72 py-2 my-2 bg-blue-200 rounded-xl px-10 focus:outline-none cursor-pointer" type="date">
+                </div>
+                
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="">Flight :</h1>
+                    <select class="w-72 py-2 my-2 bg-blue-200 focus:outline-none rounded-xl px-10 cursor-pointer" name="" id="flight">
+                        <option disabled="disabled" selected="true" value="">Choose your flight</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="">Holiday :</h1>
+                    <fieldset class="w-72 py-2 my-2 rounded-xl px-10 cursor-pointer" id="holiday">
+                        <input id="yes" name="holiday" value="yes" type="radio">
+                        <label class="mr-2 text-sm" for="">Yes</label>
+                        <input id="no" name="holiday" value="no" type="radio">
+                        <label class="text-sm" for="">No</label>
+                    </fieldset>
+                </div>
+
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="">Day :</h1>
+                    <fieldset class="w-72 py-2 my-2 rounded-xl px-10 cursor-pointer" id="day">
+                        <input id="weekday" name="day" value="weekday" type="radio">
+                        <label class="mr-2 text-sm" for="">Weekday</label>
+                        <input id="weekend" name="day" value="weekend" type="radio">
+                        <label class="text-sm" for="">Weekend</label>
+                    </fieldset>
+                </div>
+
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="">Facility :</h1>
+                    <fieldset class="w-72 py-2 my-2 rounded-xl px-10 cursor-pointer" id="facility">
+                        <input id="factrue" name="facility" value="free baggage" type="radio">
+                        <label class="mr-2 text-sm" for="">Free Baggage</label>
+                        <input id="facfalse" name="facility" value="no baggage" type="radio">
+                        <label class="text-sm" for="">No Baggage</label>
+                    </fieldset>
+                </div>
+
+                <div id="first" class="flex flex-row justify-between items-center mt-5">
+                    <button id="btn-predict" onclick="predict()" class="w-44 py-2 my-2 bg-blue-200 rounded-xl px-5 cursor-pointer">Predict</button>
+                    <button id="cancel" onclick="goBack()" class="w-44 py-2 my-2 bg-blue-200 rounded-xl px-5 cursor-pointer">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
