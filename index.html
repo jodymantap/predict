@@ -113,7 +113,15 @@
                     </fieldset>
                 </div>
 
-                <div id="first" class="flex flex-row justify-between items-center mt-5">
+                <div class="flex flex-row justify-between items-center bg-blue-200 py-2 rounded-xl animate-bounce hidden" id="price">
+                    <div class="flex">
+                        <h1 class="font-semibold px-2 w-20">Price</h1>
+                        <h1>:</h1>
+                    </div>
+                    <h1 class="px-2" id="price-text"></h1>
+                </div>
+
+                <div id="first" class="flex flex-row justify-between items-center mt-1">
                     <button id="btn-predict" onclick="predict()" class="w-44 py-2 my-2 bg-blue-200 rounded-xl px-5 cursor-pointer">Predict</button>
                     <button id="cancel" onclick="goBack()" class="w-44 py-2 my-2 bg-blue-200 rounded-xl px-5 cursor-pointer">Cancel</button>
                 </div>

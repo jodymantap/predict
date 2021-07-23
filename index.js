@@ -7,6 +7,8 @@ const predict = () => {
     ? "free baggage"
     : "no baggage";
   let btnPredict = document.getElementById("btn-predict");
+  let priceBar = document.getElementById("price");
+  let priceText = document.getElementById("price-text");
   let btnCancel = document.getElementById("cancel");
 
   if (
@@ -26,7 +28,8 @@ const predict = () => {
     day === "weekday" &&
     facility === "free baggage"
   ) {
-    btnPredict.innerHTML = "RP 815,614";
+    priceBar.style.display = "flex";
+    priceText.innerHTML = "RP 815,614";
   }
 
   if (
@@ -36,7 +39,8 @@ const predict = () => {
     day === "weekday" &&
     facility === "free baggage"
   ) {
-    btnPredict.innerHTML = "RP 761,504";
+    priceBar.style.display = "flex";
+    priceText.innerHTML = "RP 761,504";
   }
 
   if (
@@ -46,15 +50,16 @@ const predict = () => {
     day === "weekday" &&
     facility === "free baggage"
   ) {
-    btnPredict.innerHTML = "RP 817,445";
+    priceBar.style.display = "flex";
+    priceText.innerHTML = "RP 817,445";
   }
 
   btnCancel.innerHTML = "Back";
 };
 
 const goBack = () => {
-  let btnPredict = document.getElementById("btn-predict");
+  let priceBar = document.getElementById("price");
   let btnCancel = document.getElementById("cancel");
-  btnPredict.innerHTML = "Predict";
+  priceBar.style.display = "none";
   btnCancel.innerHTML = "Cancel";
 };
